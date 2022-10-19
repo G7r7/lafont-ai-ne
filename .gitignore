@@ -4,4 +4,8 @@
 
 *.env
 
-texts/
+*.pyc
+
+data_script/texts/*.txt
+
+data_script/clean_texts/*.txt
