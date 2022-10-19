@@ -2,6 +2,7 @@ from gutenbergpy.gutenbergcache import GutenbergCache
 from gutenbergpy.gutenbergcache import GutenbergCacheSettings
 import requests
 from cleaning import cleanup
+from selection import poem_selection
 import os
 
 GutenbergCacheSettings.set( CacheFilename="gutenbergindex.db")
@@ -24,7 +25,8 @@ links = list(cache.native_query('select downloadlinks.name, books.gutenbergbooki
 for link in links:
   file = requests.get(link[0])
   print(link[1])
-  open('texts/PG'+str(link[1])+'_raw.txt','wb').write(file.content)
+  with open('texts/PG'+str(link[1])+'_raw.txt','wb') as file_stream:
+    file_stream.write(file.content)
 
 
 for(dirpath, dirnames, filenames) in os.walk("texts/"):
@@ -32,3 +34,12 @@ for(dirpath, dirnames, filenames) in os.walk("texts/"):
     path = os.path.join(dirpath, filename)
     if filename.endswith('.txt'):
       cleanup(path,"clean_texts/")
+
+
+for(dirpath, dirnames, filenames) in os.walk("clean_texts/"):
+  for filename in filenames:
+    print(filename)
+    path = os.path.join(dirpath, filename)
+    poem_selection(path, filename)
+    
+  

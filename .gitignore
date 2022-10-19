@@ -9,3 +9,5 @@
 data_script/texts/*.txt
 
 data_script/clean_texts/*.txt
+
+data_script/poems/*.txt
