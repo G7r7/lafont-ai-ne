@@ -9,6 +9,8 @@ _class: invert
 
 # **AI Project**
 
+SENECAT Loïc, PERSEE Ryan, RULLIER Germain
+
 ## A French poetry generator
 
 A French poem generator based on [Project Gutenberg] dataset.
