@@ -1,5 +1,7 @@
 ﻿sqlite/
 
+data_script/*.bz2
+
 *.db
 
 *.env
