@@ -17,31 +17,26 @@ A French poem generator based on [Project Gutenberg] dataset.
 
 
 ---
+## Subject
+Generating lines of verse from a few strating words.
 
-# Outline
+The goal is to generate a poem that rimes, while using vocabulary from well-known French poets.
 
-### Subject
-  - French poetry generator.
-
-### Dataset
-  - Free eBooks website : Gutenberg 
-  - Use of existing scrapping script to gets the data 
+---
+## Datasets
+### Senetence generator
+Raw text from around 30 books of french poetry from *Project Gutenberg*.
+### Phonetic writing generator
+French dictionnary with phonetic writing.
 
 ---
 
-# Outline
-
-### Models
-  - Bert
-
-### Type of neural network
-  - RNN (Recurrent neural network)
+## Models
+We will use a transformer model for our sentence generator. Our model is decoder-only, and will be trained with a language generation objective.
 
 ---
 
-# Outline
-
-### Language & tools
+## Language & tools
   - Python
   - Jupyter
   - Tensorflow
