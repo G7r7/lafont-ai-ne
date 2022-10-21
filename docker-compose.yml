@@ -36,4 +36,5 @@ services:
     ports:
       - "8888:8888"
     volumes:
-      - ./notebooks:/notebooks
+      - ./notebooks:/tf
+      - ./data_script/poems:/poems
