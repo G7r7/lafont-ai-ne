@@ -38,3 +38,4 @@ services:
     volumes:
       - ./notebooks:/tf
       - ./data_script/poems:/poems
+      - ./lexique:/lexique
