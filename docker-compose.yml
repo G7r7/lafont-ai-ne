@@ -39,3 +39,10 @@ services:
       - ./notebooks:/tf
       - ./data_script/poems:/poems
       - ./lexique:/lexique
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
