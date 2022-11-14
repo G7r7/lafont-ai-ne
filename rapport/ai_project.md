@@ -30,3 +30,30 @@ And do it in the style of a famous poet?
 
 ![h:500](images/how_it_works.svg)
 
+---
+## Dataset
+
+- Gutenberg project (https://www.gutenberg.org/)
+
+- Use of Python scraping library (https://github.com/raduangelescu/gutenbergpy)
+
+- Filter data to get french poetry books only
+
+![h:270](images/poem.png)
+
+---
+## Data
+
+- Cleaning
+
+- Splitting
+---
+## Model 
+
+- Transformer Based Model 
+
+- Decoder Based Model
+
+---
+
+## Experiment
