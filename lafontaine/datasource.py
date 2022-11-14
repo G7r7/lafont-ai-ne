@@ -34,7 +34,7 @@ def download_dataset():
     bookshelves.name like "FR Po%sie" AND\
     downloadlinkstype.name = "text/plain; charset=utf-8" AND\
     downloadlinks.name like "%.txt" AND\
-    books.gutenbergbookid not in (17590, 62922,62508,60738,60417,58317,56708,54419,53761,52629,52065,51120,46991,46687,45312,33595,20640,20479)'))
+    books.gutenbergbookid not in (17590, 62922,62508,60738,60417,58317,56708,54419,53761,52629,52065,51120,46991,46687,45312,33595,20640,20479,60739)'))
 
     nb_links = len(links)
     for i, link in enumerate(links):
