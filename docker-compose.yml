@@ -1,43 +1,12 @@
 ﻿version: "2.1"
 services:
-  data-fetcher:
-    image: python:3.8.10-slim-buster
-    container_name: ai-data-fetcher
-    volumes:
-      - ./data_script:/app
-    working_dir: /app
-    command: tail -f /dev/null
-
-  sqlitebrowser:
-    image: lscr.io/linuxserver/sqlitebrowser:latest
-    container_name: sqlitebrowser
-    environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=Europe/London
-    volumes:
-      - ./sqlite:/config
-    ports:
-      - 3000:3000
-
-  # sqlite-client:
-  #   container_name: sqlite-client
-  #   image: keinos/sqlite3
-  #   volumes:
-  #     - "./sqlite:/workspace"
-  #   restart: unless-stopped
-  #   command: tail -f /dev/null
-  #   working_dir: /workspace
-  #   sqlite3 /workspace/sample.db -header -column 'SELECT rowid, * FROM table_sample;'
-
-  ai-notebook:
+  jupyter:
     container_name: ai-notebook
     image: tensorflow/tensorflow:latest-gpu-jupyter
     ports:
       - "8888:8888"
     volumes:
-      - ./notebooks:/tf
-      - ./data_script/poems:/poems
+      - ./lafontaine:/tf
       - ./lexique:/lexique
     deploy:
       resources:

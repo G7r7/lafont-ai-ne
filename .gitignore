@@ -8,8 +8,8 @@ data_script/*.bz2
 
 *.pyc
 
-data_script/texts/*.txt
+*.data*
+*.index
+*.pb
 
-data_script/clean_texts/*.txt
-
-data_script/poems/*.txt
+venv
